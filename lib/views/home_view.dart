@@ -1,14 +1,14 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'general/const.dart' as Const;
+import '../general/const.dart' as Const;
 
 void main() {
-  runApp(const MainApp());
+  runApp(const HomeView());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class HomeView extends StatelessWidget {
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,12 @@ class MainApp extends StatelessWidget {
         body: Center(   
           child: Column(
             children: [
-              logo
+              logo,
+              TextButton(
+                onPressed: (){
+                  // go to "add new" view
+                }, 
+                child: Text("+Tool"))
             ],
           )
         ),
